@@ -1,5 +1,5 @@
 # Product Table
-## Date:
+## Date: 7/7/25
 ## Objective:
 
 To create a structured HTML table that displays product-related information, including product names, prices, and descriptions, useful for catalogs, listings, or e-commerce prototypes.
@@ -48,8 +48,56 @@ Use meaningful text inside the table for clarity.
 
 Keep the table design strictly in HTML for simplicity.
 ## HTML Code:
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Table</title>
+</head>
+<body>
 
+    <h1>Product Catalog</h1>
+
+    <table border="1">
+        <caption>List of Available Products</caption>
+
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Laptop</td>
+                <td>₹45,000</td>
+                <td>High-speed performance for multitasking</td>
+            </tr>
+            <tr>
+                <td>Smartphone</td>
+                <td>$499</td>
+                <td>Budget-friendly with great features</td>
+            </tr>
+            <tr>
+                <td>Headphones</td>
+                <td>₹2,999</td>
+                <td>Wireless and noise-cancelling</td>
+            </tr>
+            <tr>
+                <td>Tablet</td>
+                <td>$299</td>
+                <td>Lightweight and perfect for reading</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
+```
 ## Output:
+![image](https://github.com/user-attachments/assets/7612b851-26b3-4bf6-94c0-8d13ed6f0989)
 
 ## Result:
 A structured HTML table that displays product-related information, including product names, prices, and descriptions, useful for catalogs, listings, or e-commerce prototypes is created successfully.
