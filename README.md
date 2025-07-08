@@ -1,5 +1,5 @@
 # Product Table
-## Date: 7/7/25
+## Date: 8/7/25
 ## Objective:
 
 To create a structured HTML table that displays product-related information, including product names, prices, and descriptions, useful for catalogs, listings, or e-commerce prototypes.
@@ -49,6 +49,8 @@ Use meaningful text inside the table for clarity.
 Keep the table design strictly in HTML for simplicity.
 ## HTML Code:
 ```
+index.html
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -96,8 +98,106 @@ Keep the table design strictly in HTML for simplicity.
 </body>
 </html>
 ```
+```
+style.css
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, lightcyan, lightblue);
+    margin: 40px;
+    color: navy;
+}
+
+h1 {
+    text-align: center;
+    color: steelblue;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 8px 16px rgba(70, 130, 180, 0.2);
+    background-color: aliceblue;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+caption {
+    caption-side: top;
+    padding: 12px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: navy;
+}
+
+thead {
+    background-color: steelblue;
+    color: white;
+}
+
+th, td {
+    padding: 16px 20px;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: lightsteelblue;
+}
+
+tbody tr:hover {
+    background-color: lightskyblue;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+td:nth-child(2) {
+    font-weight: bold;
+    color: deepskyblue;
+}
+
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 20px;
+        border-bottom: 1px solid skyblue;
+    }
+
+    td {
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td::before {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        color: dodgerblue;
+    }
+
+    td:nth-child(1)::before { content: "Product Name"; }
+    td:nth-child(2)::before { content: "Product Price"; }
+    td:nth-child(3)::before { content: "Description"; }
+}
+```
+
 ## Output:
 ![image](https://github.com/user-attachments/assets/7612b851-26b3-4bf6-94c0-8d13ed6f0989)
+![image](https://github.com/user-attachments/assets/9bfef6aa-1e82-4e49-86e4-06a0e4d8f6b7)
+
 
 ## Result:
 A structured HTML table that displays product-related information, including product names, prices, and descriptions, useful for catalogs, listings, or e-commerce prototypes is created successfully.
