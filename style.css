@@ -1,0 +1,91 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, lightcyan, lightblue);
+    margin: 40px;
+    color: navy;
+}
+
+h1 {
+    text-align: center;
+    color: steelblue;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 8px 16px rgba(70, 130, 180, 0.2);
+    background-color: aliceblue;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+caption {
+    caption-side: top;
+    padding: 12px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: navy;
+}
+
+thead {
+    background-color: steelblue;
+    color: white;
+}
+
+th, td {
+    padding: 16px 20px;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: lightsteelblue;
+}
+
+tbody tr:hover {
+    background-color: lightskyblue;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+td:nth-child(2) {
+    font-weight: bold;
+    color: deepskyblue;
+}
+
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 20px;
+        border-bottom: 1px solid skyblue;
+    }
+
+    td {
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td::before {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        color: dodgerblue;
+    }
+
+    td:nth-child(1)::before { content: "Product Name"; }
+    td:nth-child(2)::before { content: "Product Price"; }
+    td:nth-child(3)::before { content: "Description"; }
+}
